@@ -2,9 +2,9 @@ import express, { Application, Request, Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
-import { HTTP, mainError } from "./errors/mainError";
+import { HTTP, mainError } from "./error/mainError";
 import { NextFunction } from "connect";
-import { errorHandling } from "./errors/errorHandling";
+import { errorHandling } from "./error/errorHandling";
 
 export const appConfig = (app: Application) => {
   app.use(express.json());
