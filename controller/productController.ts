@@ -57,7 +57,7 @@ export const oneProduct  = async (req:Request,res:Response)=>{
 
 export const deleteProduct  = async (req:Request,res:Response)=>{
     try {
-        const {productID} = req.body
+        const {productID} = req.params
         const newProduct = await ProductModel.findByIdAndDelete(productID)
         res.status(HTTP.CREATE).json({
             message:"Product deleted",
