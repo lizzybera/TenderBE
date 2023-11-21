@@ -1,10 +1,12 @@
 import express, { Application } from "express";
 import { envVar } from "./config/envVariables";
 import { dbConfig } from "./config/dataBase";
+import { appConfig } from "./app";
 
 const port: number = parseInt(envVar.PORT);
 const app: Application = express();
 
+appConfig(app)
 const server = app.listen(process.env.PORT || port, () => {
   dbConfig();
 });
