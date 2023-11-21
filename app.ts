@@ -1,10 +1,10 @@
-import express, { Application, Request, Response } from "express";
+import express, { Application, NextFunction, Request, Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import { HTTP, mainError } from "./error/mainError";
-import { NextFunction } from "connect";
 import { errorHandling } from "./error/errorHandling";
+import auth from "./router/authRouter"
 
 export const appConfig = (app: Application) => {
   app.use(express.json());
@@ -12,6 +12,8 @@ export const appConfig = (app: Application) => {
   app.use(helmet());
   app.use(morgan("dev"));
   app.set("view engine", "ejs");
+
+  app.use("/", auth)
 
   app.get("/", (req: Request, res: Response) => {
     try {

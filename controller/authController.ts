@@ -23,16 +23,16 @@ export const registerUser = async (
       BVN
     });
 
-    const token = jwt.sign({ id: user._id }, "token");
+    const tokenID = jwt.sign({ id: user._id }, "token");
 
-    sendMail(user, token).then(() => {
+    sendMail(user, tokenID).then(() => {
       console.log("Mail sent...!");
     });
 
     return res.status(HTTP.CREATE).json({
       message: "Registered user",
       data: user,
-      token,
+      tokenID,
     });
   } catch (error: any) {
     return res.status(HTTP.BAD).json({

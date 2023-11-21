@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { iUser, iUserData } from "../utils/interface";
+import { iUserData } from "../utils/interface";
 
 const authModel = new mongoose.Schema<iUserData>(
   {
@@ -18,19 +18,7 @@ const authModel = new mongoose.Schema<iUserData>(
     },
     BVN: {
       type: String,
-    },
-    profile: [
-      {
-        type: mongoose.Types.ObjectId,
-        ref: "profiles",
-      },
-    ],
-    history: [
-      {
-        type: mongoose.Types.ObjectId,
-        ref: "histories",
-      },
-    ],
+    }
   },
   { timestamps: true }
 );
