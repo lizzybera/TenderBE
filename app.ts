@@ -3,6 +3,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import { HTTP, mainError } from "./error/mainError";
+import { HTTP, mainError } from "./error/mainError";
 import { NextFunction } from "connect";
 import { errorHandling } from "./error/errorHandling";
 import auth from "./router/authRouter"
