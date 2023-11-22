@@ -5,9 +5,9 @@ export interface iUser {
   password: string;
   verified: boolean;
   token: string;
-  profile: Array<string>;
-  history: Array<string>;
+  history: Array<{}>;
   BVN : string;
+  cart : []
 }
   
 
@@ -24,7 +24,13 @@ export interface iHistory {
   history: Array<{}>;
 }
 
+export interface iCart {
+  history: Array<{}>;
+}
+
 export interface iUserData extends iUser, mongoose.Document {}
+
+export interface iCartData extends iCart, mongoose.Document {}
 
 export interface iHistoryData extends iHistory, mongoose.Document {}
 

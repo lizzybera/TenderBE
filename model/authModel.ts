@@ -18,7 +18,10 @@ const authModel = new mongoose.Schema<iUserData>(
     },
     BVN: {
       type: String,
-    }
+    },
+    cart: [{
+      type: Array,
+    }],
   },
   { timestamps: true }
 );
