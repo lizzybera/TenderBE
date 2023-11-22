@@ -19,14 +19,14 @@ const authModel = new mongoose.Schema<iUserData>(
     BVN: {
       type: String,
     },
-    amount: {
+    loan: {
       type: Number,
     },
     creditWallet: {
       type: Number,
     },
     cart: [{
-      type: Array,
+      type: Array<String>,
     }],
   },
   { timestamps: true }
