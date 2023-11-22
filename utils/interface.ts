@@ -7,7 +7,9 @@ export interface iUser {
   token: string;
   history: Array<{}>;
   BVN : string;
-  cart : []
+  cart : [],
+  amount : number,
+  creditWallet : number
 }
   
 
