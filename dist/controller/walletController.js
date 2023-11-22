@@ -73,7 +73,7 @@ const payLoan = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             const params = JSON.stringify({
                 email: user === null || user === void 0 ? void 0 : user.email,
                 amount: parseInt(amount) * 100,
-                userID
+                userID,
             });
             const options = {
                 hostname: "api.paystack.co",
@@ -85,7 +85,8 @@ const payLoan = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
                     "Content-Type": "application/json",
                 },
             };
-            const ask = https_1.default.request(options, (resp) => {
+            const ask = https_1.default
+                .request(options, (resp) => {
                 let data = "";
                 resp.on("data", (chunk) => {
                     data += chunk;
@@ -129,7 +130,7 @@ const payLater = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             const params = JSON.stringify({
                 email: user === null || user === void 0 ? void 0 : user.email,
                 amount: parseInt(amount) * 100,
-                userID
+                userID,
             });
             const options = {
                 hostname: "api.paystack.co",
@@ -141,7 +142,8 @@ const payLater = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
                     "Content-Type": "application/json",
                 },
             };
-            const ask = https_1.default.request(options, (resp) => {
+            const ask = https_1.default
+                .request(options, (resp) => {
                 let data = "";
                 resp.on("data", (chunk) => {
                     data += chunk;
@@ -179,7 +181,7 @@ const payNow = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const params = JSON.stringify({
             email: user === null || user === void 0 ? void 0 : user.email,
             amount: parseInt(amount) * 100,
-            userID
+            userID,
         });
         const options = {
             hostname: "api.paystack.co",
@@ -191,7 +193,8 @@ const payNow = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
                 "Content-Type": "application/json",
             },
         };
-        const ask = https_1.default.request(options, (resp) => {
+        const ask = https_1.default
+            .request(options, (resp) => {
             let data = "";
             resp.on("data", (chunk) => {
                 data += chunk;
