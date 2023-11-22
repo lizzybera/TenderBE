@@ -26,7 +26,7 @@ const authModel = new mongoose.Schema<iUserData>(
       type: Number,
     },
     cart: [{
-      type: Array,
+      type: Array<String>,
     }],
   },
   { timestamps: true }
