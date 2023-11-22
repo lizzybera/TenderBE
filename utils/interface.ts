@@ -8,7 +8,7 @@ export interface iUser {
   history: Array<{}>;
   BVN : string;
   cart : Array<String>,
-  loan : number,
+  loaned : number,
   creditWallet : number
 }
   
@@ -20,6 +20,13 @@ export interface iProduct {
   imageID: string;
 }
 
+export interface iWallet {
+  amount: number
+  email: string
+  userID:string
+}
+
+export interface iWalletData extends iWallet, mongoose.Document{}
 export interface iProductData extends iProduct,mongoose.Document{}
 
 export interface iHistory {
