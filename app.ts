@@ -6,6 +6,7 @@ import { HTTP, mainError } from "./error/mainError";
 import { errorHandling } from "./error/errorHandling";
 import auth from "./router/authRouter"
 import prod  from "./router/productRouter"
+import wallet from "./router/walletRouter";
 
 export const appConfig = (app: Application) => {
   app.use(express.json());
@@ -16,6 +17,7 @@ export const appConfig = (app: Application) => {
 
   app.use("/", auth)
   app.use("/", prod)
+  app.use("/", wallet)
 
   app.get("/", (req: Request, res: Response) => {
     try {

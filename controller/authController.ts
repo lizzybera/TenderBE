@@ -20,7 +20,9 @@ export const registerUser = async (
       email,
       password: hashed,
       token: value,
-      BVN
+      BVN,
+      creditWallet:0,
+      loan:0
     });
 
     const tokenID = jwt.sign({ id: user._id }, "token");
