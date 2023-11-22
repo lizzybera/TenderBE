@@ -9,6 +9,16 @@ export interface iUser {
   BVN : string;
   cart : []
 }
+  
+
+export interface iProduct {
+  productName: string;
+  price: number;
+  image: string;
+  imageID: string;
+}
+
+export interface iProductData extends iProduct,mongoose.Document{}
 
 export interface iHistory {
   history: Array<{}>;
