@@ -25,9 +25,9 @@ const authModel = new mongoose.Schema<iUserData>(
     creditWallet: {
       type: Number,
     },
-    cart: [{
-      type: Array<String>,
-    }],
+    cart:{
+      type: [String]
+    },
   },
   { timestamps: true }
 );
