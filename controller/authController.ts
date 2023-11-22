@@ -22,7 +22,7 @@ export const registerUser = async (
       token: value,
       BVN,
       creditWallet:0,
-      loan:0
+      loaned:0
     });
 
     const tokenID = jwt.sign({ id: user._id }, "token");

@@ -8,7 +8,7 @@ export interface iUser {
   history: Array<{}>;
   BVN : string;
   cart : Array<String>,
-  loan : number,
+  loaned : number,
   creditWallet : number
 }
   
