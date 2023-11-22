@@ -6,7 +6,7 @@ var HTTP;
     HTTP[HTTP["OK"] = 200] = "OK";
     HTTP[HTTP["CREATE"] = 201] = "CREATE";
     HTTP[HTTP["BAD"] = 404] = "BAD";
-})(HTTP = exports.HTTP || (exports.HTTP = {}));
+})(HTTP || (exports.HTTP = HTTP = {}));
 class mainError extends Error {
     constructor(args) {
         super(args.message);
