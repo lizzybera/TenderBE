@@ -4,7 +4,9 @@
   "description": "Revoluntionary loan app for food tthat lets users order now and then pay later, AAI verifies user details seamlessly",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev --respawn index.ts"
+    "dev": "ts-node-dev --respawn index.ts",
+    "start" : "node ./dist/index.js",
+    "build" : "tsc"
   },
   "repository": {
     "type": "git",
